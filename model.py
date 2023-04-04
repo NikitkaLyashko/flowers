@@ -2,7 +2,7 @@ import random
 
 import pygame
 width_win=300
-height_win=150
+height_win=300
 rect=pygame.Rect(250,0,50,100)
 
 def drive_rect():
