@@ -16,12 +16,14 @@ def background():
     window.blit(flower_1_start, [0, model.height_win-flower_1_start.get_height()])
 
     rect_fl=pygame.draw.rect(window,[10,100,62],model.flower_rect)
+    pygame.draw.rect(window,[250,200,32],model.flower_rect_2)
 
 
 
     pygame.display.flip()
 
 
+window=pygame.display.set_mode([model.width_win,model.height_win])
 window=pygame.display.set_mode([model.width_win,model.height_win])
 water = pygame.image.load("images/water_drop.png")
 flower_1=pygame.image.load("images/flower1.png")

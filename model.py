@@ -1,11 +1,13 @@
 import random
 
 import pygame
-width_win=300
+width_win=100
 height_win=300
 rect=pygame.Rect(250,0,50,100)
 flower_rect = pygame.Rect(100, 250, 50, 100)
 flower_rect.left=0
+
+flower_rect_2=pygame.Rect(100, 250, 50, 100)
 
 
 def drive_rect():
@@ -17,6 +19,16 @@ def drive_rect():
         width_win+=3
 
     flower_rect.width = width_win / 2
+    flower_rect.height=flower_rect.width*2
+    flower_rect.bottom=height_win
+
+    flower_rect_2.left = width_win / 2
+    flower_rect_2.width = width_win / 2
+    flower_rect_2.height = flower_rect.width * 2
+    flower_rect_2.bottom=height_win
+
+
+
 
     if rect.top>=height_win:
         rect.bottom=0
