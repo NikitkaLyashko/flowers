@@ -3,7 +3,7 @@ import random
 import pygame
 width_win=100
 height_win=300
-rect=pygame.Rect(250,0,50,100)
+rect=pygame.Rect(10,0,50,100)
 flower_rect = pygame.Rect(100, 250, 50, 100)
 flower_rect.left=0
 
@@ -14,9 +14,10 @@ def drive_rect():
     global height_win, width_win, flower_rect
     rect.bottom+=5
 
-    if rect.top<height_win and rect.bottom>=height_win:
+    if rect.top<height_win and rect.bottom>=height_win and flower_rect.top>=0:
         pygame.display.set_mode([width_win+3,height_win])
         width_win+=3
+
 
     flower_rect.width = width_win / 2
     flower_rect.height=flower_rect.width*2
